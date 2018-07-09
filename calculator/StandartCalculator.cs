@@ -7,37 +7,32 @@ using calculator.Contracts;
 
 namespace calculator
 {
-    class StandartCalculator : BaseCalculator, ISubstractable<int, double>, ISubstractable<double, double>,IReturnSum,IInitialdata<double>
+   public  class StandartCalculator : BaseCalculator,IStandartCalculator
     {
+       
+        
         public void InitialData(double initData)
         {
             _initialData = initData;
+            _memoryList.Add(initData.ToString());
         }
 
         public double ReturnSum()
         {
             return _initialData;
+            _memoryList.Clear();
         }
 
         public double substract(double t)
         {
-
-
-            _calculatorList.Add( t.ToString());
-            _calculatorList.Add("-");
+           
+            _memoryList.Add("-");
+            _memoryList.Add(t.ToString());
             _initialData = _initialData - t;
             return _initialData;
-
-
+            
         }
-
-        public double substract(int t)
-        {
-            _calculatorList.Add(t.ToString());
-            _calculatorList.Add("-");
-            _initialData = _initialData - t;
-            return _initialData;
-        }
+               
     }
 
 

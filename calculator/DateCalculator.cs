@@ -7,7 +7,7 @@ using calculator.Contracts;
 
 namespace calculator
 {
-    class DateCalculator : BaseCalculator, ISubstractable<DateTime, double>,IInitialdata<DateTime>
+    class DateCalculator : BaseCalculator, IDateCalculator
     {
         public void InitialData(DateTime initData)
         {

@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseCalculator.cs" />
+    <Compile Include="Contracts\IDateCalculator.cs" />
     <Compile Include="Contracts\IInitialdata.cs" />
     <Compile Include="Contracts\IReturnSum.cs" />
+    <Compile Include="Contracts\IStandartCalculator.cs" />
     <Compile Include="Contracts\ISubstractable.cs" />
     <Compile Include="DateCalculator.cs" />
     <Compile Include="Program.cs" />

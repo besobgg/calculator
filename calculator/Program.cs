@@ -14,15 +14,18 @@ namespace calculator
         {
 
 
-            StandartCalculator sc = new StandartCalculator();
-            DateCalculator dt = new DateCalculator();
-            BaseCalculator bc = new BaseCalculator();
-            ISubstractable sub = new ISubstractable();
-             var inp1 = Console.ReadLine();
+            IStandartCalculator sc = new StandartCalculator();
+            IDateCalculator dt = new DateCalculator();
 
-             
-            var action = Console.ReadLine();
-            var inp2 = Console.ReadLine();
+            double inp1 = 50;
+            string action = "-";
+            double inp2 = 3;
+            sc.InitialData(inp1);
+            
+            sc.substract(inp2);
+
+            double result = sc.ReturnSum();
+
 
 
 

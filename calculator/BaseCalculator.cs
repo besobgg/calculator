@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace calculator
 {
-    class BaseCalculator
+    public abstract class  BaseCalculator
     {
         
-        public double _initialData = 0;
-        public DateTime _initialDate = DateTime.Now;
-        public List<string> _calculatorList = new List<string>();
+        public double _initialData { get; set; }
+        public DateTime _initialDate = DateTime.Now;        
         public List<string> _memoryList = new List<string>();
 
         public void _cleanLast()
@@ -22,7 +21,7 @@ namespace calculator
         public void _cleanAll()
         {
 
-
+            _memoryList.Clear();
         }
 
         public void _addDataInMemory(string data)
@@ -30,11 +29,7 @@ namespace calculator
             _memoryList.Add(data);
         }
 
-        public void _addActionInMemory(string action)
-        {
-
-        }
-
+        
 
 
     }
